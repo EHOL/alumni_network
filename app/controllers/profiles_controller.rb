@@ -57,6 +57,12 @@ class ProfilesController < ApplicationController
     def create
     end
 
+	def index
+		@profiles = Profile.all
+	end
+	
+	
+	
 	def toggle_status
 		if @profile.alumni
 			@profile.student
