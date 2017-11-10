@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:index, :show, :destroy, :update, :edit]
+  before_action :set_profile, only: [:show, :destroy, :update, :edit]
 
 
 	  def show
@@ -7,6 +7,7 @@ class ProfilesController < ApplicationController
     end
 
     def index
+      @profiles = Profile.all
     end
     
     def edit
